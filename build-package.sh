@@ -2,7 +2,6 @@
 set -e
 
 if [ ! $# == 1 ]; then
-
   echo "Usage: $0 <release-tag>"
   echo "Available release tags from git:"
   for line in `git tag -l`; do echo "  * $line (run \"$0 $line\")"; done
@@ -10,7 +9,6 @@ if [ ! $# == 1 ]; then
   echo "  * git tag -a <release-tag> -m \"message\""
   echo "  * git push --tags"
   exit
-
 fi
 
 # determine release tag
